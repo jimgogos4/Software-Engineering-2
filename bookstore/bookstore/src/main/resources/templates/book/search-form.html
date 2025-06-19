@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}">
+    <title>Search Books</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Book Management System</a>
+</nav>
+<div class="container">
+    <h2>Search Books</h2>
+    <form action="#" th:action="@{/users/search}" th:object="${searchFormData}" method="post">
+        <div class="form-group">
+            <label for="query">Search Query:</label>
+            <input type="text" class="form-control" id="query" th:field="*{query}">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+</body>
+</html>

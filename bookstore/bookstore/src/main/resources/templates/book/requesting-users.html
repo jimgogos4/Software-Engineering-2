@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/demo.css}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <title>Requesting Users</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Book Management System</a>
+</nav>
+<div class="container">
+    <h2>Requesting Users</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Full Name</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${requestingUsers}">
+            <td th:text="${user.username}">Username</td>
+            <td th:text="${user.fullName}">Full Name</td>
+            <td>
+                <form th:action="@{/users/acceptRequest(username=${user.username}, bookId=${bookId})}" method="post">
+                    <button type="submit" class="btn btn-success">Accept</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
