@@ -15,3 +15,5 @@ Under the following terms:
 You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
 
 View the full license at: https://creativecommons.org/licenses/by-nc/4.0/
+This is an educational Spring Boot project for an online bookstore.
+You are welcome to use or modify it for personal or academic purposes, but **commercial use is strictly prohibited**.
